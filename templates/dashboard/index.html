@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aki's F1 Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,900;1,600;1,900&family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<div class="ticker"><div class="ticker-track" id="ticker">LOADING LIVE DATA…</div></div>
+<div class="wrap">
+  <div class="top">
+    <div class="l mono"><div class="flag-chk"></div>Personal Edition · F1 <span id="yr">2026</span></div>
+    <div class="greet"><span id="greet">Hello</span><small id="date"></small></div>
+  </div>
+  <h1>Akshra's<em>Pit Wall.</em></h1>
+  <div class="rule"></div><div class="rule2"></div>
+  <div class="bar">
+    <div><div class="live mono">Live Edition</div></div>
+    <div><nav class="mono"><a href="#drivers">Drivers</a> · <a href="#constructors">Constructors</a> · <a href="#paddock">Paddock</a> · <a href="#calendar">Calendar</a></nav><div class="upd mono" id="upd">Syncing…</div></div>
+  </div>
+  <div class="err" id="err"></div>
+
+  <section class="hero" id="hero"></section>
+
+  <div class="sec-h" id="calendar"><h3>Season <em>Calendar</em></h3><span class="mono" id="calmeta"></span></div>
+  <div class="cal" id="cal"></div>
+
+  <div class="cols">
+    <div class="col" id="drivers"><header><div class="n mono">§ 01</div><h3>Drivers' <em>Championship</em></h3><div class="s mono" id="dsub">Top 10</div></header><div id="dlist"></div></div>
+    <div class="col" id="constructors"><header><div class="n mono">§ 02</div><h3>Constructors' <em>Cup</em></h3><div class="s mono" id="csub">All teams</div></header><div id="clist"></div></div>
+    <div class="col" id="paddock"><header><div class="n mono">§ 03</div><h3>Paddock <em>Intel</em></h3><div class="s mono">Last race · top stories</div></header><div id="intel"></div></div>
+  </div>
+
+  <div class="stats" id="stats"></div>
+  <footer class="mono"><span>For Akshra · Eyes only <b style="color:var(--red)">•</b> Lights out and away we go</span><i>The Pit Wall</i></footer>
+</div>
+
+<script src="{% static 'js/config.js' %}"></script>
+<script src="{% static 'js/api.js' %}"></script>
+<script src="{% static 'js/app.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "builds": [
+    { "src": "pitwall/wsgi.py", "use": "@vercel/python", "config": { "maxLambdaSize": "15mb" } }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "pitwall/wsgi.py" }
+  ]
+}
